@@ -15,8 +15,7 @@ import { VerseTextComponent } from "./verse-text/verse-text.component";
 export class AppComponent {
   title = '1000th-try-app';
   verses = start_verses;
-  selectedVerseId = 'u1';
-  
+  selectedVerseId?: string; 
 
   get selectedVerse(){
     return this.verses.find((verse) => verse.id === this.selectedVerseId);

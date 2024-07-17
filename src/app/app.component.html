@@ -13,6 +13,10 @@
         }
     </ul>
 
-    <app-verse-text [text]="selectedVerse?.text">
-    </app-verse-text>
+    @if (selectedVerse) {
+        <app-verse-text [text]="selectedVerse.text" />
+    } @else { 
+        <p id="fallback"> Select a Verse to Study or Check</p>
+    }
+   
 </main>
