@@ -2,25 +2,15 @@
 
 <main>
     <ul id="verses">
-        <li>
-            <app-verse-list 
-                [verse]="verses[0]"
-                (select)="onGetVerse($event)">
-            </app-verse-list>
-                
-        </li>
-        <li>
-            <app-verse-list 
-                [verse]="verses[1]"
-                (select)="onGetVerse($event)">
-            </app-verse-list>
-        </li>
-        <li>
-            <app-verse-list 
-                [verse]="verses[2]"
-                (select)="onGetVerse($event)">
-            </app-verse-list>
-        </li>
+        @for (verse of verses; track verse.id) {
+            <li>
+                <app-verse-list 
+                    [verse]="verse"
+                    (select)="onGetVerse($event)">
+                </app-verse-list>
+                    
+            </li>
+        }
     </ul>
 
     <app-verse-text [text]="selectedVerse?.text">
