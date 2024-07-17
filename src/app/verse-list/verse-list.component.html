@@ -1,5 +1,6 @@
 <div>
-    <button>
-        <span>VERSE</span>
+    <button (click)="onSelectVerse()">
+        <span>{{ selectedVerse().reference }}</span>
+        <!-- <span>{{ selectedVerse.text }}</span> -->
     </button>
 </div>

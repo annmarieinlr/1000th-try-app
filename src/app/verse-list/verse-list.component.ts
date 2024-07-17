@@ -1,4 +1,7 @@
-import { Component } from '@angular/core';
+import { Component, signal } from '@angular/core';
+import { start_verses } from '../start-verses';
+
+const randomIndex = Math.floor(Math.random() * start_verses.length);
 
 @Component({
   selector: 'app-verse-list',
@@ -8,5 +11,12 @@ import { Component } from '@angular/core';
   styleUrl: './verse-list.component.css'
 })
 export class VerseListComponent {
+  // selectedVerse = start_verses[randomIndex]
+  selectedVerse = signal(start_verses[randomIndex]);
 
+  onSelectVerse() {
+    const randomIndex = Math.floor(Math.random() * start_verses.length);
+    this.selectedVerse.set(start_verses[randomIndex]);
+//    this.selectedVerse = start_verses[randomIndex]
+  }
 }
