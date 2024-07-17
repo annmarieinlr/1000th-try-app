@@ -12,14 +12,17 @@ const randomIndex = Math.floor(Math.random() * start_verses.length);
 })
 
 export class VerseListComponent {
-  @Input() reference!: string;
-  @Input() text!: string;
-  @Input() id!: string;
+  @Input({ required: true}) verse!: {
+    reference: string;
+    text: string;
+    id: string;
+  };
+  
   @Output() select = new EventEmitter();
   
   
     onSelectVerse() {
-      this.select.emit(this.id);
+      this.select.emit(this.verse.id);
     }
 
 //BELOW WAS CODE FOR SELECTING RANDOM VERSE FROM LIST. uSE THIS FOR TEST MODE LATER

@@ -19,7 +19,7 @@ export class AppComponent {
   
 
   get selectedVerse(){
-    return this.verses.find((verse) => verse.id === this.selectedVerseId)!;
+    return this.verses.find((verse) => verse.id === this.selectedVerseId);
   }
 
   onGetVerse(id: string){

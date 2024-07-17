@@ -8,5 +8,5 @@ import { Component, Input } from '@angular/core';
   styleUrl: './verse-text.component.css'
 })
 export class VerseTextComponent {
-  @Input({ required: true }) text!: string;
+  @Input() text: string | undefined;
 }
