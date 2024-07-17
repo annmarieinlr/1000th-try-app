@@ -3,8 +3,32 @@
 <main>
     <ul id="verses">
         <li>
-            <app-verse-list></app-verse-list>
+            <app-verse-list 
+                [id]="verses[0].id"
+                [reference]="verses[0].reference"
+                [text]="verses[0].text"
+                (select)="onGetVerse($event)">
+            </app-verse-list>
+                
+        </li>
+        <li>
+            <app-verse-list 
+                [id]="verses[1].id"
+                [reference]="verses[1].reference"
+                [text]="verses[1].text"
+                (select)="onGetVerse($event)">
+            </app-verse-list>
+        </li>
+        <li>
+            <app-verse-list 
+                [id]="verses[2].id"
+                [reference]="verses[2].reference"
+                [text]="verses[2].text"
+                (select)="onGetVerse($event)">
+            </app-verse-list>
         </li>
     </ul>
 
+    <app-verse-text [text]="selectedVerse.text">
+    </app-verse-text>
 </main>

@@ -7,7 +7,8 @@ div {
   button {
     display: flex;
     align-items: center;
-    gap: 0.5rem;
+    gap: 1rem;
+    margin-bottom: 0.5rem;
     padding: 0.35rem 0.5rem;
     background-color: #373352;
     color: #d0d2e1;
